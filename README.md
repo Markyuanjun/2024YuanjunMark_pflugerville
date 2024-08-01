@@ -1,1 +1,54 @@
-just a website for guiding everyone bring food and drink 
+<!yuanjunmark2024 html>
+<html>
+<head>
+    <title>Yuanjunmark_2024_pflugerville_lake_checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            margin-bottom: 20px;
+        }
+        .list-container {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function addEntry() {
+            // Get the name and food input values
+            var name = document.getElementById('name').value;
+            var food = document.getElementById('food').value;
+
+            // Create a new list item
+            var li = document.createElement('li');
+            li.textContent = name + ' will bring ' + food;
+
+            // Append the list item to the list
+            document.getElementById('foodList').appendChild(li);
+
+            // Clear the input fields
+            document.getElementById('name').value = '';
+            document.getElementById('food').value = '';
+        }
+    </script>
+</head>
+<body>
+    <h1>Yuanjunmark_2024_pflugerville_lake_checklist</h1>
+    <h2>Date:08/03/2024</h2>
+   <h3>Time:Noon-2pm</h3>
+ <h4>Location:18216 Weiss Ln, Pflugerville, TX 78660</h4>
+    <div class="form-container">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <label for="food">Food:</label>
+        <input type="text" id="food">
+        <button onclick="addEntry()">Add</button>
+    </div>
+    <div class="list-container">
+        <h2>Who's Bringing What</h5>
+        <ul id="foodList">
+            <!-- Entries will appear here -->
+        </ul>
+    </div>
+</body>
+</html>
